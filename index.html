@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heros Beauty Place | Lashes, Brows, Nails and Hair in Lekki</title>
+<meta name="description" content="Book lashes, brows, nails, pedicure and hair at Heros Beauty Place, Wellstocked Mall, Lekki Phase 1.">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#e23d87;--rose:#ffb6d3;--blush:#fff3f8;--plum:#3a0a25;--gold:#b98a4a;--serif:"Bodoni Moda",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 17px/1.6 var(--sans);background:var(--blush);color:var(--plum)}
+section{scroll-margin-top:110px}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:var(--blush);border-bottom:1px solid #f3cfe0}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.logo{display:flex;align-items:center;gap:10px;font:700 22px var(--serif);color:var(--pink);text-decoration:none;letter-spacing:.02em}
+.logo img{width:44px;height:44px;border-radius:50%}
+nav{display:flex;gap:22px;order:3;width:100%;padding-bottom:6px}
+nav a{color:var(--plum);text-decoration:none;font-weight:500;font-size:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--pink);color:#fff;border-radius:99px;padding:13px 24px;font:700 16px var(--sans);text-decoration:none;min-height:46px}
+.btn.alt{background:#fff;color:var(--pink);border:2px solid var(--pink)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--pink),var(--rose));color:#fff;padding:72px 0 80px}
+.hero .wrap{position:relative}
+.hero h1{font:700 clamp(64px,16vw,150px)/.95 var(--serif);letter-spacing:-.01em}
+.hero p{font-size:clamp(20px,3vw,26px);max-width:520px;margin:20px 0 32px;line-height:1.4}
+.hero .btn{background:#fff;color:var(--pink)}
+.hero .btn.alt{background:transparent;color:#fff;border-color:#fff}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sec{padding:72px 0}
+h2{font:700 clamp(32px,5vw,46px)/1.1 var(--serif);margin-bottom:12px}
+.lead{max-width:520px;margin-bottom:32px}
+.tabs{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px;margin-bottom:20px}
+.tab{border:2px solid var(--pink);background:transparent;color:var(--pink);border-radius:99px;padding:10px 20px;font:700 16px var(--sans);cursor:pointer;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--pink);color:#fff}
+.panel{background:#fff;border-radius:20px;padding:6px 24px;max-width:640px}
+h3{font:700 22px var(--serif);color:var(--pink);margin-bottom:6px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 4px;border-bottom:1px solid #f6dce8;font-size:18px}
+.row:last-child{border-bottom:0}
+.row a{color:var(--pink);font-weight:700;text-decoration:none;white-space:nowrap;border:2px solid var(--pink);border-radius:99px;padding:6px 18px}
+.row a:hover{background:var(--pink);color:#fff}
+.band{background:var(--plum);color:#fff}
+.band h2{color:var(--rose)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.band p{margin-bottom:20px;color:#f6dce8}
+.band .btn{background:var(--rose);color:var(--plum)}
+.info{display:grid;gap:14px;margin-top:8px}
+.info a,.info div{color:inherit;text-decoration:none;font-size:18px}
+.info b{display:block;font-size:14px;color:var(--gold)}
+footer{background:var(--blush);padding:28px 0 96px;font-size:14px;color:#7a4b62;border-top:1px solid #f3cfe0}
+.fab{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;padding:0;background:#25d366;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.fab svg{width:30px;height:30px}
+.btn,.tab,.row a{transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn:hover,.tab:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(58,10,37,.2)}
+.row{transition:background .2s}.row:hover{background:var(--blush)}
+nav a{transition:color .2s}nav a:hover{color:var(--pink)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero h1{animation:rise .8s both}.hero p{animation:rise .8s .15s both}.hero .cta{animation:rise .8s .3s both}
+.panel.swap{animation:rise .4s both}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+.fly{position:absolute;color:#fff;opacity:.55;pointer-events:none;animation:drift 7s ease-in-out infinite}
+.f1{top:16%;right:12%;font-size:30px}.f2{top:55%;right:26%;font-size:18px;animation-delay:-2s}.f3{top:28%;right:40%;font-size:14px;animation-delay:-4s}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(15deg)}}
+.fab{animation:fly .8s .6s both cubic-bezier(.2,.8,.2,1)}
+@keyframes fly{from{transform:translate(80px,60px) scale(.6);opacity:0}to{transform:none;opacity:1}}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;animation:pulse 3s 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%,100%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+@media(max-width:480px){.logo{font-size:18px;gap:8px}.logo img{width:36px;height:36px}.bar .btn{width:44px;height:44px;padding:0}.bar .lbl{display:none}nav{gap:16px}nav a{font-size:15px}}
+@media(min-width:760px){nav{order:0;width:auto;padding:0}.bar{flex-wrap:nowrap}.sec{padding:96px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.52.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.3 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.696.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top"><img src="images/logo.png" alt="" width="44" height="44">Heros Beauty Place</a>
+<nav aria-label="Main"><a href="#services">Services</a><a href="#more">Training and space</a><a href="#contact">Contact</a></nav>
+<a class="btn wa" href="#" aria-label="Book now on WhatsApp"><svg><use href="#wa"/></svg><span class="lbl">Book now</span></a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<span class="fly f1" aria-hidden="true">&#10022;</span><span class="fly f2" aria-hidden="true">&#10022;</span><span class="fly f3" aria-hidden="true">&#10022;</span>
+<div class="wrap">
+<h1>Heros</h1>
+<p>Lashes, brows, nails and hair in Lekki. Pick your service and book in one tap.</p>
+<div class="cta"><a class="btn wa" href="#"><svg><use href="#wa"/></svg>Book on WhatsApp</a><a class="btn alt" href="#services">See services</a></div>
+</div>
+</section>
+
+<section class="sec" id="services">
+<div class="wrap">
+<h2>Our services</h2>
+<p class="lead">Tap Book next to a service. WhatsApp opens with your choice already typed, ready to send.</p>
+<div class="tabs" id="tabs" role="tablist" aria-label="Service categories"></div>
+<div class="panel" id="panel"></div>
+</div>
+</section>
+
+<section class="sec band" id="more">
+<div class="wrap two">
+<div><h2>Trainings</h2><p>Want to learn the craft? Message us to ask about the next training.</p><a class="btn" id="tr" href="#">Ask about training</a></div>
+<div><h2>Nail space for rent</h2><p>A nail space is available at our Wellstocked Mall location in Lekki Phase 1.</p><a class="btn" id="sp" href="#">Ask about the space</a></div>
+</div>
+</section>
+
+<section class="sec" id="contact">
+<div class="wrap">
+<h2>Visit or message us</h2>
+<div class="info">
+<div><b>Where</b>Wellstocked Mall, Hakeem Dickson Road, Lekki Phase 1, Lagos</div>
+<div><b>Days</b>Monday to Saturday</div>
+<a class="wa" href="#"><b>WhatsApp or call</b>0811 378 4685</a>
+<a href="https://instagram.com/heros_beauty_place" target="_blank" rel="noopener"><b>Instagram</b>@heros_beauty_place</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 Heros Beauty Place. Preview by Sammykraft Technologies. Services, prices and hours to be confirmed with the owner.</div></footer>
+
+<a class="btn fab wa" href="#" target="_blank" rel="noopener" aria-label="Chat with Heros Beauty Place on WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+const N="2348113784685",wa=t=>"https://wa.me/"+N+"?text="+encodeURIComponent(t);
+document.querySelectorAll(".wa").forEach(a=>a.href=wa("Hello Hero’s_beauty_place. I would like to book an appointment today. How soon can we proceed?"));
+const G=[["Lashes and brows",["Lash extensions","Micro blading","Brows lamination"]],["Nails and feet",["Nails fix","Pedicure"]],["Hair",["Frontal installation","Braiding"]],["Skin and lips",["Skin tag removal","Pink lips blush"]]];
+const tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
+function show(i){[...tabs.children].forEach((b,j)=>b.setAttribute("aria-selected",i===j));panel.innerHTML=G[i][1].map(s=>`<div class="row"><span>${s}</span><a href="${wa("Hello Hero’s_beauty_place. I would like to book "+s+" today. How soon can we proceed?")}">Book</a></div>`).join("");panel.classList.remove("swap");void panel.offsetWidth;panel.classList.add("swap")}
+tabs.innerHTML=G.map(g=>`<button class="tab" role="tab" aria-selected="false">${g[0]}</button>`).join("");
+[...tabs.children].forEach((b,i)=>b.onclick=()=>show(i));show(0);
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&"IntersectionObserver"in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});document.querySelectorAll(".sec h2,.lead,.tabs,.band .two>div,.info>*").forEach(el=>{el.classList.add("rv");io.observe(el)})}
+document.getElementById("tr").href=wa("Hello Hero’s_beauty_place. I would like to ask about your next training. How soon can we proceed?");
+document.getElementById("sp").href=wa("Hello Hero’s_beauty_place. I would like to ask about the nail space for rent. How soon can we proceed?");
+</script>
+</body>
+</html>
